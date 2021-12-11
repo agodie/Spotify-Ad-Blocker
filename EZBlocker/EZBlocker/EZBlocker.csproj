@@ -87,7 +87,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AudioUtils.cs" />
-    <Compile Include="Analytics.cs" />
     <Compile Include="MediaHook.cs" />
     <Compile Include="Properties\strings.Designer.cs">
       <AutoGen>True</AutoGen>

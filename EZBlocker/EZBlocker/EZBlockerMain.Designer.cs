@@ -37,13 +37,7 @@
             this.websiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.separatorToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.WebsiteLink = new System.Windows.Forms.LinkLabel();
-            this.Heartbeat = new System.Windows.Forms.Timer(this.components);
-            this.VolumeMixerButton = new System.Windows.Forms.Button();
             this.StatusLabel = new System.Windows.Forms.Label();
-            this.BlockBannersCheckbox = new System.Windows.Forms.CheckBox();
-            this.StartupCheckbox = new System.Windows.Forms.CheckBox();
-            this.SpotifyCheckbox = new System.Windows.Forms.CheckBox();
             this.NotifyIconContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,7 +76,6 @@
             this.websiteToolStripMenuItem.Name = "websiteToolStripMenuItem";
             resources.ApplyResources(this.websiteToolStripMenuItem, "websiteToolStripMenuItem");
             this.websiteToolStripMenuItem.Text = global::EZBlocker.Properties.strings.ToolStripWebsite;
-            this.websiteToolStripMenuItem.Click += new System.EventHandler(this.websiteToolStripMenuItem_Click);
             // 
             // separatorToolStripMenuItem
             // 
@@ -96,66 +89,16 @@
             this.exitToolStripMenuItem.Text = global::EZBlocker.Properties.strings.ToolStripExit;
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // WebsiteLink
-            // 
-            resources.ApplyResources(this.WebsiteLink, "WebsiteLink");
-            this.WebsiteLink.Name = "WebsiteLink";
-            this.WebsiteLink.TabStop = true;
-            this.WebsiteLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.WebsiteLink_LinkClicked);
-            // 
-            // Heartbeat
-            // 
-            this.Heartbeat.Enabled = true;
-            this.Heartbeat.Interval = 60000;
-            this.Heartbeat.Tick += new System.EventHandler(this.Heartbeat_Tick);
-            // 
-            // VolumeMixerButton
-            // 
-            resources.ApplyResources(this.VolumeMixerButton, "VolumeMixerButton");
-            this.VolumeMixerButton.Name = "VolumeMixerButton";
-            this.VolumeMixerButton.Text = global::EZBlocker.Properties.strings.VolumeMixerButtonText;
-            this.VolumeMixerButton.UseVisualStyleBackColor = true;
-            this.VolumeMixerButton.Click += new System.EventHandler(this.VolumeMixerButton_Click);
-            // 
             // StatusLabel
             // 
             resources.ApplyResources(this.StatusLabel, "StatusLabel");
             this.StatusLabel.Name = "StatusLabel";
             // 
-            // BlockBannersCheckbox
-            // 
-            resources.ApplyResources(this.BlockBannersCheckbox, "BlockBannersCheckbox");
-            this.BlockBannersCheckbox.Name = "BlockBannersCheckbox";
-            this.BlockBannersCheckbox.Text = global::EZBlocker.Properties.strings.BlockBannersCheckboxText;
-            this.BlockBannersCheckbox.UseVisualStyleBackColor = true;
-            this.BlockBannersCheckbox.Click += new System.EventHandler(this.SkipAdsCheckbox_Click);
-            // 
-            // StartupCheckbox
-            // 
-            resources.ApplyResources(this.StartupCheckbox, "StartupCheckbox");
-            this.StartupCheckbox.Name = "StartupCheckbox";
-            this.StartupCheckbox.Text = global::EZBlocker.Properties.strings.StartupCheckboxText;
-            this.StartupCheckbox.UseVisualStyleBackColor = true;
-            this.StartupCheckbox.CheckedChanged += new System.EventHandler(this.StartupCheckbox_CheckedChanged);
-            // 
-            // SpotifyCheckbox
-            // 
-            resources.ApplyResources(this.SpotifyCheckbox, "SpotifyCheckbox");
-            this.SpotifyCheckbox.Name = "SpotifyCheckbox";
-            this.SpotifyCheckbox.Text = global::EZBlocker.Properties.strings.SpotifyCheckboxText;
-            this.SpotifyCheckbox.UseVisualStyleBackColor = true;
-            this.SpotifyCheckbox.CheckedChanged += new System.EventHandler(this.SpotifyCheckbox_CheckedChanged);
-            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.SpotifyCheckbox);
-            this.Controls.Add(this.StartupCheckbox);
-            this.Controls.Add(this.BlockBannersCheckbox);
             this.Controls.Add(this.StatusLabel);
-            this.Controls.Add(this.VolumeMixerButton);
-            this.Controls.Add(this.WebsiteLink);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -170,19 +113,13 @@
 
         #endregion
         private System.Windows.Forms.NotifyIcon NotifyIcon;
-        private System.Windows.Forms.LinkLabel WebsiteLink;
-        private System.Windows.Forms.Timer Heartbeat;
-        private System.Windows.Forms.Button VolumeMixerButton;
         private System.Windows.Forms.Label StatusLabel;
-        private System.Windows.Forms.CheckBox BlockBannersCheckbox;
         private System.Windows.Forms.Timer MainTimer;
-        private System.Windows.Forms.CheckBox StartupCheckbox;
         private System.Windows.Forms.ContextMenuStrip NotifyIconContextMenu;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator separatorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem websiteToolStripMenuItem;
-        private System.Windows.Forms.CheckBox SpotifyCheckbox;
     }
 }
 
