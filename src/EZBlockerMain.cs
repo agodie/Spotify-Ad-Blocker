@@ -10,7 +10,6 @@ namespace EZBlocker
     {
         private bool muted = false;
         private string lastMessage = "";
-        private ToolTip artistTooltip = new ToolTip();
 
         private readonly string volumeMixerPath = Environment.GetEnvironmentVariable("WINDIR") + @"\System32\SndVol.exe";
 
@@ -45,12 +44,11 @@ namespace EZBlocker
                         }
 
                         string artist = hook.CurrentArtist;
-                        var message = string.Join(" ", new List<string>{ Properties.strings.StatusMuting,  artist, ":", hook.CurrentTitle });
+                        var message = string.Join(" ", new List<string> { Properties.strings.StatusMuting, artist, ":", hook.CurrentTitle });
                         if (lastMessage != message)
                         {
                             lastMessage = message;
                             StatusLabel.Text = message;
-                            artistTooltip.SetToolTip(StatusLabel, artist);
                             LogAction("/mute/" + artist);
                         }
                     }
@@ -70,7 +68,6 @@ namespace EZBlocker
                         {
                             lastMessage = message;
                             StatusLabel.Text = message;
-                            artistTooltip.SetToolTip(StatusLabel, artist);
                             LogAction("/play/" + artist);
                         }
                     }
@@ -81,7 +78,6 @@ namespace EZBlocker
                         {
                             lastMessage = message;
                             StatusLabel.Text = message;
-                            artistTooltip.SetToolTip(StatusLabel, "");
                         }
                     }
                 }
@@ -93,7 +89,6 @@ namespace EZBlocker
                     {
                         lastMessage = message;
                         StatusLabel.Text = message;
-                        artistTooltip.SetToolTip(StatusLabel, "");
                     };
                 }
             }
