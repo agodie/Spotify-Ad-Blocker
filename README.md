@@ -34,7 +34,6 @@ Using a console prompt:
 * Create and move to a `build` directory;
 * generate a VS solution with CMake `cmake.exe .. -G "Visual Studio 16 2019"`;
 * open the VS solution created;
-* remove projects `ALL_BUILD` and `ZERO_CHECK` (*workaround is under study*)
 * build the project
 
 # Credits

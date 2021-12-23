@@ -25,6 +25,7 @@ add_executable(EZBlocker
   Properties/strings.Designer.cs
   Properties/strings.resx)
 
+
 set_target_properties(EZBlocker PROPERTIES
   WIN32_EXECUTABLE                   true
   VS_DOTNET_TARGET_FRAMEWORK_VERSION "v4.7.2"
@@ -75,3 +76,5 @@ set_property(TARGET EZBlocker PROPERTY VS_DOTNET_REFERENCES
     "System.Windows.Forms"
     "System.Xml"
 )
+
+set(CMAKE_SUPPRESS_REGENERATION ON)
