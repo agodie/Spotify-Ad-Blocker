@@ -16,6 +16,7 @@ namespace EZBlocker
         private GlobalSystemMediaTransportControlsSessionManager SessionManager;
         private GlobalSystemMediaTransportControlsSession SpotifyMediaSession;
         public string CurrentArtist { get; private set; }
+        public string CurrentTitle { get; private set; }
         public bool IsAdPlaying { get; private set; }
         public bool IsPlaying { get; private set; }
 
@@ -66,15 +67,16 @@ namespace EZBlocker
                 GlobalSystemMediaTransportControlsSessionMediaProperties mediaProperties = await SpotifyMediaSession.TryGetMediaPropertiesAsync();
                 GlobalSystemMediaTransportControlsSessionPlaybackControls mediaControls = SpotifyMediaSession.GetPlaybackInfo().Controls;
 
-                CurrentArtist = mediaProperties.Artist.Length > 0 ? mediaProperties.Artist : mediaProperties.Title;
-                IsAdPlaying = !mediaControls.IsNextEnabled || mediaProperties.Title == "Advertisement";
+                CurrentArtist = mediaProperties.Artist;
+                CurrentTitle = mediaProperties.Title;
+
+                IsAdPlaying = !mediaControls.IsNextEnabled || CurrentTitle == "Advertisement";
                 IsPlaying = mediaControls.IsPauseEnabled;
             } catch (Exception e)
             {
                 Debug.WriteLine("UpdateMediaInfo exception " + e.ToString());
-                CurrentArtist = "N/A";
-                IsAdPlaying = false;
-                IsPlaying = false;
+                CurrentArtist = CurrentTitle = Properties.strings.NaText;
+                IsAdPlaying = IsPlaying = false;
                 await RegisterSpotifyMediaSession(true);
             } 
         }

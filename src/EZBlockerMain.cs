@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using System.Diagnostics;
@@ -44,7 +45,7 @@ namespace EZBlocker
                         }
 
                         string artist = hook.CurrentArtist;
-                        string message = Properties.strings.StatusMuting + " " + Truncate(artist);
+                        var message = string.Join(" ", new List<string>{ Properties.strings.StatusMuting,  artist, ":", hook.CurrentTitle });
                         if (lastMessage != message)
                         {
                             lastMessage = message;
@@ -64,7 +65,7 @@ namespace EZBlocker
                         if (MainTimer.Interval != 200) MainTimer.Interval = 200;
 
                         string artist = hook.CurrentArtist;
-                        string message = Properties.strings.StatusPlaying + " " + Truncate(artist);
+                        string message = string.Join(" ", new List<string> { Properties.strings.StatusPlaying, artist, hook.CurrentTitle });
                         if (lastMessage != message)
                         {
                             lastMessage = message;
@@ -111,15 +112,6 @@ namespace EZBlocker
         {
             AudioUtils.SetSpotifyMute(mute);
             muted = mute;
-        }
-
-        private string Truncate(string name)
-        {
-            if (name.Length > 9)
-            {
-                return name.Substring(0, 9) + "...";
-            }
-            return name;
         }
 
         private void LogAction(string action)
