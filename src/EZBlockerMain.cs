@@ -190,7 +190,6 @@ namespace EZBlocker
 
         private void RestoreFromTray()
         {
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.WindowState = FormWindowState.Normal;
             this.ShowInTaskbar = true;
         }
@@ -218,7 +217,6 @@ namespace EZBlocker
             if (this.WindowState == FormWindowState.Minimized)
             {
                 this.ShowInTaskbar = false;
-                this.FormBorderStyle = FormBorderStyle.FixedToolWindow;
                 Notify(Properties.strings.HiddenNotify);
             }
         }

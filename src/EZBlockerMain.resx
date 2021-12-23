@@ -140,7 +140,7 @@
     <value>293, 30</value>
   </data>
   <data name="NotifyIconContextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 128</value>
+    <value>294, 100</value>
   </data>
   <data name="&gt;&gt;NotifyIconContextMenu.Name" xml:space="preserve">
     <value>NotifyIconContextMenu</value>
@@ -7375,7 +7375,7 @@
     <value>NoControl</value>
   </data>
   <data name="StatusLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 134</value>
+    <value>4, 0</value>
   </data>
   <data name="StatusLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
@@ -7396,10 +7396,46 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;StatusLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>aTableLayout</value>
   </data>
   <data name="&gt;&gt;StatusLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="aTableLayout.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="aTableLayout.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="aTableLayout.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="aTableLayout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="aTableLayout.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="aTableLayout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>274, 44</value>
+  </data>
+  <data name="aTableLayout.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;aTableLayout.Name" xml:space="preserve">
+    <value>aTableLayout</value>
+  </data>
+  <data name="&gt;&gt;aTableLayout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aTableLayout.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;aTableLayout.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="aTableLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="StatusLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,50,Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -7408,7 +7444,7 @@
     <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>291, 163</value>
+    <value>274, 44</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
