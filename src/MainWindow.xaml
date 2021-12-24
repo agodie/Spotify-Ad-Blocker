@@ -1,0 +1,37 @@
+<Window x:Class="EZBlocker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms" 
+        xmlns:local="clr-namespace:EZBlocker"
+        mc:Ignorable="d"
+        Title="YAEZBlocker"
+        Loaded="MainLoad"
+        Closing="OnWindowClosing"
+        StateChanged="OnWindowStateChanged"
+        Height="125" Width="308"
+        SizeToContent="Height"
+        Icon="/resources/my_music.ico">
+    <Grid Margin="11">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!-- Playing Status -->
+        <TextBlock Grid.Row="0" Grid.Column="0" x:Name="StatusDescTextBlock">Status:</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="1" x:Name="StatusValueTextBlock">aStatus</TextBlock>
+        <!-- Song Artist -->
+        <TextBlock Grid.Row="1" Grid.Column="0" x:Name="ArtistDescTextBlock">Artist:</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="1" x:Name="ArtistValueTextBlock">aArtist</TextBlock>
+        <!-- Song title -->
+        <TextBlock Grid.Row="2" Grid.Column="0" x:Name="TitleDescTextBlock">Title:</TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="1" x:Name="TitleValueTextBlock">aTitle</TextBlock>
+
+    </Grid>
+</Window>

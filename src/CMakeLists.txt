@@ -4,17 +4,21 @@ project(EZBlocker LANGUAGES CSharp)
 
 include(CSharpUtilities)
 
+SET(IMAGE_RESOURCES
+    "resources/my_music.ico"
+)
+
 add_executable(EZBlocker
   App.config
-
-
-  EZBlockerMain.Designer.cs
-  EZBlockerMain.cs
-  EZBlockerMain.resx
+  
+  App.xaml
+  App.xaml.cs
+  
+  MainWindow.xaml
+  MainWindow.xaml.cs
 
   AudioUtils.cs
   MediaHook.cs
-  Program.cs
 
   Properties/AssemblyInfo.cs
 
@@ -23,8 +27,14 @@ add_executable(EZBlocker
   Properties/Settings.settings
   
   Properties/strings.Designer.cs
-  Properties/strings.resx)
+  Properties/strings.resx
 
+  ${IMAGE_RESOURCES}  
+)
+
+
+set_property(SOURCE App.xaml PROPERTY VS_XAML_TYPE "ApplicationDefinition")
+SET_SOURCE_FILES_PROPERTIES(${IMAGE_RESOURCES} PROPERTIES VS_TOOL_OVERRIDE "Resource")
 
 set_target_properties(EZBlocker PROPERTIES
   WIN32_EXECUTABLE                   true
@@ -34,11 +44,6 @@ set_target_properties(EZBlocker PROPERTIES
 
 set(CMAKE_CSharp_FLAGS "/langversion:latest")
 
-csharp_set_windows_forms_properties(
-  EZBlockerMain.Designer.cs
-  EZBlockerMain.cs
-  EZBlockerMain.resx
-)
 csharp_set_designer_cs_properties(
   Properties/AssemblyInfo.cs
 
@@ -50,6 +55,13 @@ csharp_set_designer_cs_properties(
   Properties/strings.resx
 )
 
+csharp_set_xaml_cs_properties(
+  App.xaml
+  App.xaml.cs
+  
+  MainWindow.xaml
+  MainWindow.xaml.cs
+)
 
 set_property(TARGET EZBlocker
     PROPERTY VS_PACKAGE_REFERENCES
@@ -70,10 +82,8 @@ set_property(TARGET EZBlocker PROPERTY VS_DOTNET_REFERENCES
     "System.Data"
     "System.Drawing"
     "System.IO.Compression.FileSystem"
-    "System.Net"
-    "System.Net.Http"
-    "System.Web.Extensions"
     "System.Windows.Forms"
+    "System.Xaml"
     "System.Xml"
 )
 
