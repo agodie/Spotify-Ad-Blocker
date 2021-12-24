@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EZBlocker.Properties {
+namespace YAEZBlocker.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -20,18 +20,6 @@ namespace EZBlocker.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string CID {
-            get {
-                return ((string)(this["CID"]));
-            }
-            set {
-                this["CID"] = value;
             }
         }
         
@@ -49,18 +37,6 @@ namespace EZBlocker.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool UserEducated {
-            get {
-                return ((bool)(this["UserEducated"]));
-            }
-            set {
-                this["UserEducated"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool StartSpotify {
             get {
@@ -68,18 +44,6 @@ namespace EZBlocker.Properties {
             }
             set {
                 this["StartSpotify"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string LastPatched {
-            get {
-                return ((string)(this["LastPatched"]));
-            }
-            set {
-                this["LastPatched"] = value;
             }
         }
         

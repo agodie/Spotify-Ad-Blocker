@@ -6,7 +6,7 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Threading;
 
-namespace EZBlocker
+namespace YAEZBlocker
 {
     public partial class MainWindow : Window
     {
@@ -168,13 +168,6 @@ namespace EZBlocker
             }
             catch (Exception) { }
 
-            // Set up Analytics
-            if (String.IsNullOrEmpty(Properties.Settings.Default.CID))
-            {
-                Properties.Settings.Default.CID = "0";
-                Properties.Settings.Default.Save();
-            }
-
             // Start Spotify hook
             hook = new MediaHook();
             mainTimer.Start();
@@ -242,7 +235,6 @@ namespace EZBlocker
 
             if (result == MessageBoxResult.Yes)
             {
-                Properties.Settings.Default.UserEducated = true;
                 Properties.Settings.Default.Save();
             }
         }

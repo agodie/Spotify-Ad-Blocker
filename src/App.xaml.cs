@@ -2,7 +2,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Windows;
 
-namespace EZBlocker
+namespace YAEZBlocker
 {
     public partial class App : Application
     {

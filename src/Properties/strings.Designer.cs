@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EZBlocker.Properties {
-    using System;
-    
-    
+namespace YAEZBlocker.Properties
+{
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,7 +22,7 @@ namespace EZBlocker.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class strings {
+    public class strings {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,10 +36,10 @@ namespace EZBlocker.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EZBlocker.Properties.strings", typeof(strings).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("YAEZBlocker.Properties.strings", typeof(strings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,7 +51,7 @@ namespace EZBlocker.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace EZBlocker.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Block Banner Ads.
         /// </summary>
-        internal static string BlockBannersCheckboxText {
+        public static string BlockBannersCheckboxText {
             get {
                 return ResourceManager.GetString("BlockBannersCheckboxText", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace EZBlocker.Properties {
         /// <summary>
         ///   Looks up a localized string similar to You may need to restart Spotify or your computer for this setting to take effect..
         /// </summary>
-        internal static string BlockBannersRestart {
+        public static string BlockBannersRestart {
             get {
                 return ResourceManager.GetString("BlockBannersRestart", resourceCulture);
             }
@@ -81,18 +81,18 @@ namespace EZBlocker.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Enabling/Disabling this option requires Administrator privileges.
         ///
-        ///Please reopen EZBlocker with &quot;Run as Administrator&quot;..
+        ///Please reopen YAEZBlocker with &quot;Run as Administrator&quot;..
         /// </summary>
-        internal static string BlockBannersUAC {
+        public static string BlockBannersUAC {
             get {
                 return ResourceManager.GetString("BlockBannersUAC", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to EZBlocker is hidden. Double-click this icon to restore..
+        ///   Looks up a localized string similar to YAEZBlocker is hidden. Double-click this icon to restore..
         /// </summary>
-        internal static string HiddenNotify {
+        public static string HiddenNotify {
             get {
                 return ResourceManager.GetString("HiddenNotify", resourceCulture);
             }
@@ -101,37 +101,28 @@ namespace EZBlocker.Properties {
         /// <summary>
         ///   Looks up a localized string similar to N/A.
         /// </summary>
-        internal static string NaText {
+        public static string NaText {
             get {
                 return ResourceManager.GetString("NaText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Spotify ads will not be muted if EZBlocker is not running.
+        ///   Looks up a localized string similar to Spotify ads will not be muted if YAEZBlocker is not running.
         ///
         ///Are you sure you want to exit?.
         /// </summary>
-        internal static string OnExitMessageBox {
+        public static string OnExitMessageBox {
             get {
                 return ResourceManager.GetString("OnExitMessageBox", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Error patching Spotify. EZBlocker may not work..
-        /// </summary>
-        internal static string PatchErrorMessageBox {
-            get {
-                return ResourceManager.GetString("PatchErrorMessageBox", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to EZBlocker Version: {0}
+        ///   Looks up a localized string similar to YAEZBlocker Version: {0}
         ///Spotify Version: {1}.
         /// </summary>
-        internal static string ReportProblemClipboard {
+        public static string ReportProblemClipboard {
             get {
                 return ResourceManager.GetString("ReportProblemClipboard", resourceCulture);
             }
@@ -141,39 +132,28 @@ namespace EZBlocker.Properties {
         ///   Looks up a localized string similar to Please leave a comment clearly describing your problem.
         ///
         ///Paste this information (already copied to your clipboard):
-        ///EZBlocker Version: {0}
+        ///YAEZBlocker Version: {0}
         ///Spotify Version: {1}.
         /// </summary>
-        internal static string ReportProblemMessageBox {
+        public static string ReportProblemMessageBox {
             get {
                 return ResourceManager.GetString("ReportProblemMessageBox", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Start Spotify with EZBlocker.
+        ///   Looks up a localized string similar to Start Spotify with YAEZBlocker.
         /// </summary>
-        internal static string SpotifyCheckboxText {
+        public static string SpotifyCheckboxText {
             get {
                 return ResourceManager.GetString("SpotifyCheckboxText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Spotify is not installed or you have the Windows Store version.
-        ///
-        ///Click &apos;OK&apos; to install the normal desktop version of Spotify..
+        ///   Looks up a localized string similar to Start YAEZBlocker on Login.
         /// </summary>
-        internal static string SpotifyNotFoundMessageBox {
-            get {
-                return ResourceManager.GetString("SpotifyNotFoundMessageBox", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Start EZBlocker on Login.
-        /// </summary>
-        internal static string StartupCheckboxText {
+        public static string StartupCheckboxText {
             get {
                 return ResourceManager.GetString("StartupCheckboxText", resourceCulture);
             }
@@ -182,16 +162,16 @@ namespace EZBlocker.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Loading....
         /// </summary>
-        internal static string StatusLabelLoadingText {
+        public static string StatusLabelLoadingText {
             get {
                 return ResourceManager.GetString("StatusLabelLoadingText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Muting:.
+        ///   Looks up a localized string similar to Muting.
         /// </summary>
-        internal static string StatusMuting {
+        public static string StatusMuting {
             get {
                 return ResourceManager.GetString("StatusMuting", resourceCulture);
             }
@@ -200,7 +180,7 @@ namespace EZBlocker.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Spotify not found.
         /// </summary>
-        internal static string StatusNotFound {
+        public static string StatusNotFound {
             get {
                 return ResourceManager.GetString("StatusNotFound", resourceCulture);
             }
@@ -209,16 +189,16 @@ namespace EZBlocker.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Spotify is paused.
         /// </summary>
-        internal static string StatusPaused {
+        public static string StatusPaused {
             get {
                 return ResourceManager.GetString("StatusPaused", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Playing:.
+        ///   Looks up a localized string similar to Playing.
         /// </summary>
-        internal static string StatusPlaying {
+        public static string StatusPlaying {
             get {
                 return ResourceManager.GetString("StatusPlaying", resourceCulture);
             }
@@ -227,79 +207,43 @@ namespace EZBlocker.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Exit.
         /// </summary>
-        internal static string ToolStripExit {
+        public static string ToolStripExit {
             get {
                 return ResourceManager.GetString("ToolStripExit", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Show EZBlocker Window.
+        ///   Looks up a localized string similar to Show YAEZBlocker Window.
         /// </summary>
-        internal static string ToolStripOpen {
+        public static string ToolStripOpen {
             get {
                 return ResourceManager.GetString("ToolStripOpen", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Remove EZBlocker from Spotify.
+        ///   Looks up a localized string similar to Open YAEZBlocker Website.
         /// </summary>
-        internal static string ToolStripRemovePatch {
-            get {
-                return ResourceManager.GetString("ToolStripRemovePatch", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Open EZBlocker Website.
-        /// </summary>
-        internal static string ToolStripWebsite {
+        public static string ToolStripWebsite {
             get {
                 return ResourceManager.GetString("ToolStripWebsite", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Translated by Eric Zhang.
-        /// </summary>
-        internal static string TranslatedByText {
-            get {
-                return ResourceManager.GetString("TranslatedByText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Failed to remove EZBlocker from Spotify..
-        /// </summary>
-        internal static string UndoPatchFailMessageBox {
-            get {
-                return ResourceManager.GetString("UndoPatchFailMessageBox", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to EZBlocker removed from Spotify..
-        /// </summary>
-        internal static string UndoPatchOKMessageBox {
-            get {
-                return ResourceManager.GetString("UndoPatchOKMessageBox", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Error checking for update..
         /// </summary>
-        internal static string UpgradeErrorMessageBox {
+        public static string UpgradeErrorMessageBox {
             get {
                 return ResourceManager.GetString("UpgradeErrorMessageBox", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to There is a newer version of EZBlocker available. Would you like to upgrade?.
+        ///   Looks up a localized string similar to There is a newer version of YAEZBlocker available. Would you like to upgrade?.
         /// </summary>
-        internal static string UpgradeMessageBox {
+        public static string UpgradeMessageBox {
             get {
                 return ResourceManager.GetString("UpgradeMessageBox", resourceCulture);
             }
@@ -308,7 +252,7 @@ namespace EZBlocker.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Open Volume Control.
         /// </summary>
-        internal static string VolumeMixerButtonText {
+        public static string VolumeMixerButtonText {
             get {
                 return ResourceManager.GetString("VolumeMixerButtonText", resourceCulture);
             }
@@ -317,7 +261,7 @@ namespace EZBlocker.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Could not open Volume Control.
         /// </summary>
-        internal static string VolumeMixerOpenError {
+        public static string VolumeMixerOpenError {
             get {
                 return ResourceManager.GetString("VolumeMixerOpenError", resourceCulture);
             }
@@ -326,7 +270,7 @@ namespace EZBlocker.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Report Problem.
         /// </summary>
-        internal static string WebsiteLinkText {
+        public static string WebsiteLinkText {
             get {
                 return ResourceManager.GetString("WebsiteLinkText", resourceCulture);
             }
