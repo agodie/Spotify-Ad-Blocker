@@ -127,18 +127,6 @@
     <value>147, 16</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 30</value>
-  </data>
-  <data name="websiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 30</value>
-  </data>
-  <data name="separatorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 6</value>
-  </data>
-  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 30</value>
-  </data>
   <data name="NotifyIconContextMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>294, 100</value>
   </data>
@@ -7364,6 +7352,18 @@
   <data name="NotifyIcon.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>293, 30</value>
+  </data>
+  <data name="websiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>293, 30</value>
+  </data>
+  <data name="separatorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>290, 6</value>
+  </data>
+  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>293, 30</value>
+  </data>
   <data name="StatusLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -7375,7 +7375,7 @@
     <value>NoControl</value>
   </data>
   <data name="StatusLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 0</value>
+    <value>15, 11</value>
   </data>
   <data name="StatusLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
@@ -7401,11 +7401,71 @@
   <data name="&gt;&gt;StatusLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="aTableLayout.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="aTableLayout.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
   <data name="aTableLayout.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="ArtistLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ArtistLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ArtistLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 28</value>
+  </data>
+  <data name="ArtistLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>312, 17</value>
+  </data>
+  <data name="ArtistLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="ArtistLabel.Text" xml:space="preserve">
+    <value>aArtist</value>
+  </data>
+  <data name="&gt;&gt;ArtistLabel.Name" xml:space="preserve">
+    <value>ArtistLabel</value>
+  </data>
+  <data name="&gt;&gt;ArtistLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ArtistLabel.Parent" xml:space="preserve">
+    <value>aTableLayout</value>
+  </data>
+  <data name="&gt;&gt;ArtistLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TitleLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TitleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 45</value>
+  </data>
+  <data name="TitleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 17</value>
+  </data>
+  <data name="TitleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="TitleLabel.Text" xml:space="preserve">
+    <value>aSongTitle</value>
+  </data>
+  <data name="&gt;&gt;TitleLabel.Name" xml:space="preserve">
+    <value>TitleLabel</value>
+  </data>
+  <data name="&gt;&gt;TitleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TitleLabel.Parent" xml:space="preserve">
+    <value>aTableLayout</value>
+  </data>
+  <data name="&gt;&gt;TitleLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="aTableLayout.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -7413,11 +7473,17 @@
   <data name="aTableLayout.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="aTableLayout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>11, 11, 11, 11</value>
+  </data>
+  <data name="aTableLayout.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>11, 11, 11, 11</value>
+  </data>
   <data name="aTableLayout.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="aTableLayout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>274, 44</value>
+    <value>340, 94</value>
   </data>
   <data name="aTableLayout.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -7435,7 +7501,7 @@
     <value>1</value>
   </data>
   <data name="aTableLayout.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="StatusLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,50,Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="StatusLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ArtistLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="TitleLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -7444,7 +7510,7 @@
     <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>274, 44</value>
+    <value>340, 94</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

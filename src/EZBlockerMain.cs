@@ -11,10 +11,8 @@ namespace EZBlocker
         private bool muted = false;
         private string lastMessage = "";
 
-        private readonly string volumeMixerPath = Environment.GetEnvironmentVariable("WINDIR") + @"\System32\SndVol.exe";
-
         private DateTime lastRequest;
-        private string lastAction = "";
+        private string lastActionMessage = "";
         private MediaHook hook;
 
         public Main()
@@ -26,7 +24,7 @@ namespace EZBlocker
         /**
          * Contains the logic for when to mute Spotify
          **/
-        private void MainTimer_Tick(object sender, EventArgs e)
+        private void MainTimerTick(object sender, EventArgs e)
         {
             try
             {
@@ -42,15 +40,8 @@ namespace EZBlocker
                             hook.SendNextTrack();
                             Thread.Sleep(500);
                         }
-
-                        string artist = hook.CurrentArtist;
-                        var message = string.Join(" ", new List<string> { Properties.strings.StatusMuting, artist, ":", hook.CurrentTitle });
-                        if (lastMessage != message)
-                        {
-                            lastMessage = message;
-                            StatusLabel.Text = message;
-                            LogAction("/mute/" + artist);
-                        }
+                        UpdateLabels(Properties.strings.StatusMuting, hook.CurrentArtist, hook.CurrentTitle);
+                        LogAction("/mute/", hook.CurrentArtist, hook.CurrentTitle);
                     }
                     else if (hook.IsPlaying) // Normal music
                     {
@@ -61,35 +52,19 @@ namespace EZBlocker
                             Mute(false);
                         }
                         if (MainTimer.Interval != 200) MainTimer.Interval = 200;
-
-                        string artist = hook.CurrentArtist;
-                        string message = string.Join(" ", new List<string> { Properties.strings.StatusPlaying, artist, hook.CurrentTitle });
-                        if (lastMessage != message)
-                        {
-                            lastMessage = message;
-                            StatusLabel.Text = message;
-                            LogAction("/play/" + artist);
-                        }
+                        UpdateLabels(Properties.strings.StatusPlaying, hook.CurrentArtist, hook.CurrentTitle);
+                        LogAction("/play/", hook.CurrentArtist, hook.CurrentTitle);
                     }
                     else
                     {
-                        string message = Properties.strings.StatusPaused;
-                        if (lastMessage != message)
-                        {
-                            lastMessage = message;
-                            StatusLabel.Text = message;
-                        }
+                        UpdateLabels(Properties.strings.StatusPaused);
+                        LogAction("/pause/");
                     }
                 }
                 else
                 {
                     if (MainTimer.Interval != 1000) MainTimer.Interval = 1000;
-                    string message = Properties.strings.StatusNotFound;
-                    if (lastMessage != message)
-                    {
-                        lastMessage = message;
-                        StatusLabel.Text = message;
-                    };
+                    UpdateLabels(Properties.strings.StatusNotFound);
                 }
             }
             catch (Exception ex)
@@ -100,8 +75,8 @@ namespace EZBlocker
 
         /**
          * Mutes/Unmutes Spotify.
-         
-         * i: false = unmute, true = mute
+         *  false = unmute,
+         *  true  = mute
          **/
         private void Mute(bool mute)
         {
@@ -109,14 +84,36 @@ namespace EZBlocker
             muted = mute;
         }
 
-        private void LogAction(string action)
+        private void UpdateLabels(string status, string currentArtist = "", string currentTitle = "")
         {
-            if (lastAction.Equals(action) && DateTime.Now - lastRequest < TimeSpan.FromMinutes(5)) return;
-            lastAction = action;
+            var messageItems = new List<string> { status, currentArtist, currentTitle }
+                .FindAll(item => item.Length > 0);
+            var message = string.Join(" ", messageItems);
+            if (lastMessage != message)
+            {
+                lastMessage = message;
+                StatusLabel.Text = status;
+                ArtistLabel.Text = currentArtist;
+                TitleLabel.Text = currentTitle;
+            };
+        }
+
+        /**
+         * This logging does nothing useful at the moment.
+         * Keep it as building block if someone wants to build
+         * on top.
+         */
+        private void LogAction(string action, string currentArtist = "", string currentTitle = "")
+        {
+            var messageItems = new List<string> { action, currentArtist, currentTitle }
+                .FindAll(item => item.Length > 0);
+            var actionMessage = string.Join(";", messageItems);
+            if (lastActionMessage.Equals(actionMessage) && DateTime.Now - lastRequest < TimeSpan.FromMinutes(5)) return;
+            lastActionMessage = action;
             lastRequest = DateTime.Now;
         }
 
-        private void Main_Load(object sender, EventArgs e)
+        private void MainLoad(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.UpdateSettings) // If true, then first launch of latest EZBlocker
             {
@@ -156,11 +153,8 @@ namespace EZBlocker
 
             // Start Spotify hook
             hook = new MediaHook();
-
             MainTimer.Enabled = true;
-
             LogAction("/launch");
-
         }
 
         private string GetSpotifyPath()
@@ -186,7 +180,7 @@ namespace EZBlocker
             NotifyIcon.ShowBalloonTip(5000, "EZBlocker", message, ToolTipIcon.None);
         }
 
-        private void NotifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void NotifyIconMouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (!this.ShowInTaskbar && e.Button == MouseButtons.Left)
             {
@@ -194,12 +188,12 @@ namespace EZBlocker
             }
         }
 
-        private void NotifyIcon_BalloonTipClicked(object sender, EventArgs e)
+        private void NotifyIconBalloonTipClicked(object sender, EventArgs e)
         {
             RestoreFromTray();
         }
 
-        private void Form_Resize(object sender, EventArgs e)
+        private void FormResize(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Minimized)
             {
@@ -208,12 +202,12 @@ namespace EZBlocker
             }
         }
 
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        private void OpenToolStripMenuItemClick(object sender, EventArgs e)
         {
             RestoreFromTray();
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItemClick(object sender, EventArgs e)
         {
             Close();
         }

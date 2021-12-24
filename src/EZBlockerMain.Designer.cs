@@ -39,6 +39,8 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusLabel = new System.Windows.Forms.Label();
             this.aTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.ArtistLabel = new System.Windows.Forms.Label();
+            this.TitleLabel = new System.Windows.Forms.Label();
             this.NotifyIconContextMenu.SuspendLayout();
             this.aTableLayout.SuspendLayout();
             this.SuspendLayout();
@@ -46,14 +48,14 @@
             // MainTimer
             // 
             this.MainTimer.Interval = 600;
-            this.MainTimer.Tick += new System.EventHandler(this.MainTimer_Tick);
+            this.MainTimer.Tick += new System.EventHandler(this.MainTimerTick);
             // 
             // NotifyIcon
             // 
             this.NotifyIcon.ContextMenuStrip = this.NotifyIconContextMenu;
             resources.ApplyResources(this.NotifyIcon, "NotifyIcon");
-            this.NotifyIcon.BalloonTipClicked += new System.EventHandler(this.NotifyIcon_BalloonTipClicked);
-            this.NotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon_MouseDoubleClick);
+            this.NotifyIcon.BalloonTipClicked += new System.EventHandler(this.NotifyIconBalloonTipClicked);
+            this.NotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIconMouseDoubleClick);
             // 
             // NotifyIconContextMenu
             // 
@@ -71,7 +73,7 @@
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
             this.openToolStripMenuItem.Text = global::EZBlocker.Properties.strings.ToolStripOpen;
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItemClick);
             // 
             // websiteToolStripMenuItem
             // 
@@ -89,7 +91,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
             this.exitToolStripMenuItem.Text = global::EZBlocker.Properties.strings.ToolStripExit;
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
             // 
             // StatusLabel
             // 
@@ -100,7 +102,19 @@
             // 
             resources.ApplyResources(this.aTableLayout, "aTableLayout");
             this.aTableLayout.Controls.Add(this.StatusLabel, 0, 0);
+            this.aTableLayout.Controls.Add(this.ArtistLabel, 0, 1);
+            this.aTableLayout.Controls.Add(this.TitleLabel, 0, 2);
             this.aTableLayout.Name = "aTableLayout";
+            // 
+            // ArtistLabel
+            // 
+            resources.ApplyResources(this.ArtistLabel, "ArtistLabel");
+            this.ArtistLabel.Name = "ArtistLabel";
+            // 
+            // TitleLabel
+            // 
+            resources.ApplyResources(this.TitleLabel, "TitleLabel");
+            this.TitleLabel.Name = "TitleLabel";
             // 
             // Main
             // 
@@ -108,13 +122,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.aTableLayout);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.MaximizeBox = false;
             this.Name = "Main";
-            this.Load += new System.EventHandler(this.Main_Load);
-            this.Resize += new System.EventHandler(this.Form_Resize);
+            this.Load += new System.EventHandler(this.MainLoad);
+            this.Resize += new System.EventHandler(this.FormResize);
             this.NotifyIconContextMenu.ResumeLayout(false);
             this.aTableLayout.ResumeLayout(false);
             this.aTableLayout.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -128,6 +144,8 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem websiteToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel aTableLayout;
+        private System.Windows.Forms.Label ArtistLabel;
+        private System.Windows.Forms.Label TitleLabel;
     }
 }
 
