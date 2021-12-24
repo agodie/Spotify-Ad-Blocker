@@ -34,7 +34,6 @@
             this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.NotifyIconContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.websiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.separatorToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusLabel = new System.Windows.Forms.Label();
@@ -62,7 +61,6 @@
             this.NotifyIconContextMenu.ImageScalingSize = new System.Drawing.Size(19, 19);
             this.NotifyIconContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openToolStripMenuItem,
-            this.websiteToolStripMenuItem,
             this.separatorToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.NotifyIconContextMenu.Name = "NotifyIconContextMenu";
@@ -74,12 +72,6 @@
             resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
             this.openToolStripMenuItem.Text = global::EZBlocker.Properties.strings.ToolStripOpen;
             this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItemClick);
-            // 
-            // websiteToolStripMenuItem
-            // 
-            this.websiteToolStripMenuItem.Name = "websiteToolStripMenuItem";
-            resources.ApplyResources(this.websiteToolStripMenuItem, "websiteToolStripMenuItem");
-            this.websiteToolStripMenuItem.Text = global::EZBlocker.Properties.strings.ToolStripWebsite;
             // 
             // separatorToolStripMenuItem
             // 
@@ -142,7 +134,6 @@
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator separatorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem websiteToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel aTableLayout;
         private System.Windows.Forms.Label ArtistLabel;
         private System.Windows.Forms.Label TitleLabel;

@@ -127,8 +127,17 @@
     <value>147, 16</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>293, 30</value>
+  </data>
+  <data name="separatorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>290, 6</value>
+  </data>
+  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>293, 30</value>
+  </data>
   <data name="NotifyIconContextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 100</value>
+    <value>294, 70</value>
   </data>
   <data name="&gt;&gt;NotifyIconContextMenu.Name" xml:space="preserve">
     <value>NotifyIconContextMenu</value>
@@ -7351,18 +7360,6 @@
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="NotifyIcon.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 30</value>
-  </data>
-  <data name="websiteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 30</value>
-  </data>
-  <data name="separatorToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 6</value>
-  </data>
-  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 30</value>
   </data>
   <data name="StatusLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -14749,12 +14746,6 @@
     <value>openToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;openToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;websiteToolStripMenuItem.Name" xml:space="preserve">
-    <value>websiteToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;websiteToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;separatorToolStripMenuItem.Name" xml:space="preserve">
